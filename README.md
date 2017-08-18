@@ -19,6 +19,12 @@ Two easy commands:
 pip install git+git://github.com/nacnudus/csvdedupe
 ```
 
+If you're developing from a local clone of the repo, then do
+
+```
+sudo pip install --upgrade --force-reinstall git+file:///path/to/csvdedupe
+```
+
 ## Getting Started
 
 ### csvdedupe
