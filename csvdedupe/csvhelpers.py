@@ -80,7 +80,7 @@ def writeResults(clustered_dupes, input_file, output_file):
 
     unique_record_id = cluster_id + 1
 
-    writer = csv.writer(output_file)
+    writer = csv.writer(output_file, quoting = csv.QUOTE_NONNUMERIC)
 
     reader = csv.reader(StringIO(input_file))
 
@@ -113,7 +113,7 @@ def writeUniqueResults(clustered_dupes, input_file, output_file):
 
     unique_record_id = cluster_id + 1
 
-    writer = csv.writer(output_file)
+    writer = csv.writer(output_file, quoting = csv.QUOTE_NONNUMERIC)
 
     reader = csv.reader(StringIO(input_file))
 
@@ -160,7 +160,7 @@ def writeLinkedResults(clustered_pairs, input_1, input_2, output_file,
         seen_1.add(index_1)
         seen_2.add(index_2)
 
-    writer = csv.writer(output_file)
+    writer = csv.writer(output_file, quoting = csv.QUOTE_NONNUMERIC)
     writer.writerow(row_header)
 
     for matches in matched_records:
